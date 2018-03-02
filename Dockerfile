@@ -17,5 +17,5 @@ RUN rm -rf ./config.cfg
 RUN apk --no-cache add ca-certificates && update-ca-certificates
 
 VOLUME ["/etc/acme-dns", "/var/lib/acme-dns"]
-ENTRYPOINT ["./acme-dns"]
+ENTRYPOINT ["./acme-dns.v10"]
 EXPOSE 53 80 443
