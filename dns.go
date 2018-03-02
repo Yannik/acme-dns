@@ -53,7 +53,7 @@ func answer(q dns.Question) ([]dns.RR, int, error) {
 	r, ok := RR.Records[rtype][domain]
 	if !ok {
 		rcode = dns.RcodeNameError
-		r, ok := RR.Records[dns.TypeCNAME][domain]
+		r, ok = RR.Records[dns.TypeCNAME][domain]
 		if ok {
 			rcode = dns.RcodeSuccess
 		}
